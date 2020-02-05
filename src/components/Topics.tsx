@@ -85,7 +85,7 @@ export class Topics extends React.PureComponent<TopicsProps, TopicsState> {
         })
       })
     } catch {
-      alert('Topic deletion failed')
+      alert('Topic check failed')
     }
   }
 
@@ -104,7 +104,7 @@ export class Topics extends React.PureComponent<TopicsProps, TopicsState> {
   render() {
     return (
       <div>
-        <Header as="h1">Topics</Header>
+        <Header as="h1">Style Ideas</Header>
 
         {this.renderCreateTopicInput()}
 
@@ -122,7 +122,7 @@ export class Topics extends React.PureComponent<TopicsProps, TopicsState> {
               color: 'teal',
               labelPosition: 'left',
               icon: 'add',
-              content: 'New task',
+              content: 'New idea',
               onClick: this.onTopicCreate
             }}
             fluid

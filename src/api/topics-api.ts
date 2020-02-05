@@ -35,7 +35,7 @@ export async function patchTopic(
   topicId: string,
   updatedTopic: UpdateTopicRequest
 ): Promise<void> {
-  await Axios.patch(`${apiEndpoint}/todos/${topicId}`, JSON.stringify(updatedTopic), {
+  await Axios.patch(`${apiEndpoint}/topics/${topicId}`, JSON.stringify(updatedTopic), {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${idToken}`
