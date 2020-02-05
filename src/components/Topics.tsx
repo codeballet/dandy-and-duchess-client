@@ -64,7 +64,7 @@ export class Topics extends React.PureComponent<TopicsProps, TopicsState> {
     try {
       await deleteTopic(this.props.auth.getIdToken(), topicId)
       this.setState({
-        topics: this.state.topics.filter(topic => topic.topicId != topicId)
+        topics: this.state.topics.filter(topic => topic.topicId !== topicId)
       })
     } catch {
       alert('Topic deletion failed')
