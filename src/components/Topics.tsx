@@ -46,10 +46,10 @@ export class Topics extends React.PureComponent<TopicsProps, TopicsState> {
 
   onTopicCreate = async (event: React.ChangeEvent<HTMLButtonElement>) => {
     try {
-      // const dueDate = this.calculateDueDate()
+      const dueDate = this.calculateDueDate()
       const newTopic = await createTopic(this.props.auth.getIdToken(), {
         description: this.state.newTopicDescription,
-        // dueDate
+        dueDate
       })
       this.setState({
         topics: [...this.state.topics, newTopic],
