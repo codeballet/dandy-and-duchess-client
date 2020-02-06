@@ -193,7 +193,7 @@ export class Topics extends React.PureComponent<TopicsProps, TopicsState> {
                 </Button>
               </Grid.Column>
               {topic.attachmentUrl && (
-                <Image src={topic.attachmentUrl} size="small" wrapped />
+                <Image src={topic.attachmentUrl} size="medium" wrapped />
               )}
               <Grid.Column width={16}>
                 <Divider />
