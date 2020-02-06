@@ -7,6 +7,7 @@ import { EditTopic } from './components/EditTopic'
 import { LogIn } from './components/LogIn'
 import { NotFound } from './components/NotFound'
 import { Topics } from './components/Topics'
+import Home from './components/Home'
 
 export interface AppProps {}
 
@@ -59,6 +60,9 @@ export default class App extends Component<AppProps, AppState> {
         <Menu.Item name="home">
           <Link to="/">Home</Link>
         </Menu.Item>
+        <Menu.Item name="topics">
+          <Link to="/topics">Topics</Link>
+        </Menu.Item>
 
         <Menu.Menu position="right">{this.logInLogOutButton()}</Menu.Menu>
       </Menu>
@@ -82,16 +86,23 @@ export default class App extends Component<AppProps, AppState> {
   }
 
   generateCurrentPage() {
-    if (!this.props.auth.isAuthenticated()) {
-      return <LogIn auth={this.props.auth} />
-    }
-
     return (
       <Switch>
-        <Route
+        <Route 
           path="/"
           exact
           render={props => {
+            return <Home image="/flora-portrait.jpg" />
+          }}
+        />
+
+        <Route
+          path="/topics"
+          exact
+          render={props => {
+            if (!this.props.auth.isAuthenticated()) {
+              return <LogIn auth={this.props.auth} />
+            }
             return <Topics {...props} auth={this.props.auth} />
           }}
         />
@@ -100,6 +111,9 @@ export default class App extends Component<AppProps, AppState> {
           path="/topics/:topicId/edit"
           exact
           render={props => {
+            if (!this.props.auth.isAuthenticated()) {
+              return <LogIn auth={this.props.auth} />
+            }
             return <EditTopic {...props} auth={this.props.auth} />
           }}
         />
