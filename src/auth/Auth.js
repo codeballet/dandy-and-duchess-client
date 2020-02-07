@@ -63,7 +63,7 @@ export default class Auth {
     this.expiresAt = expiresAt;
 
     // navigate to the myzone route
-    this.history.replace('/myzone');
+    this.history.replace('myzone');
   }
 
   renewSession() {
