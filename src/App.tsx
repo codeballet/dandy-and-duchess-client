@@ -66,7 +66,9 @@ export default class App extends Component<AppProps, AppState> {
         <Menu.Item name="topics">
           <Link to="/topics">Topics</Link>
         </Menu.Item>
-
+        <Menu.Item name="about">
+          <Link to="/about">About</Link>
+        </Menu.Item>
         <Menu.Menu position="right">{this.logInLogOutButton()}</Menu.Menu>
       </Menu>
     )
@@ -104,8 +106,7 @@ export default class App extends Component<AppProps, AppState> {
           exact
           render={props => {
             return <p>Write some ideas here</p>
-          }}
-        
+          }} 
         />
 
         <Route
@@ -117,6 +118,14 @@ export default class App extends Component<AppProps, AppState> {
             }
             return <Topics {...props} auth={this.props.auth} />
           }}
+        />
+
+        <Route
+          path="/about"
+          exact
+          render={props => {
+            return <p>This is about us.</p>
+          }} 
         />
 
         <Route
