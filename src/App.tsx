@@ -60,6 +60,9 @@ export default class App extends Component<AppProps, AppState> {
         <Menu.Item name="home">
           <Link to="/">Home</Link>
         </Menu.Item>
+        <Menu.Item name="ideas">
+          <Link to="/ideas">Ideas</Link>
+        </Menu.Item>
         <Menu.Item name="topics">
           <Link to="/topics">Topics</Link>
         </Menu.Item>
@@ -94,6 +97,15 @@ export default class App extends Component<AppProps, AppState> {
           render={props => {
             return <Home image="/flora-portrait.jpg" />
           }}
+        />
+
+        <Route
+          path="/ideas"
+          exact
+          render={props => {
+            return <p>Write some ideas here</p>
+          }}
+        
         />
 
         <Route
