@@ -8,6 +8,8 @@ import { LogIn } from './components/LogIn'
 import { NotFound } from './components/NotFound'
 import { Topics } from './components/Topics'
 import Home from './components/Home'
+import Ideas from './components/Ideas'
+import About from './components/About'
 
 export interface AppProps {}
 
@@ -105,7 +107,7 @@ export default class App extends Component<AppProps, AppState> {
           path="/ideas"
           exact
           render={props => {
-            return <p>Write some ideas here</p>
+            return <Ideas />
           }} 
         />
 
@@ -124,7 +126,7 @@ export default class App extends Component<AppProps, AppState> {
           path="/about"
           exact
           render={props => {
-            return <p>This is about us.</p>
+            return <About />
           }} 
         />
 
