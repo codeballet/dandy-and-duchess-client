@@ -8,5 +8,5 @@ export const authConfig = {
   domain: 'dev-jx6ojzae.eu.auth0.com',            // Auth0 domain
   clientId: 'YtbToRTMxUpHoDdpXCavzkeaSD8O3OQi',   // Auth0 client id
   // callbackUrl: 'http://localhost:3000/callback'
-  callbackUrl: 'https://master.ddmb4h23t8ghh.amplifyapp.com/myzone'
+  callbackUrl: 'https://master.ddmb4h23t8ghh.amplifyapp.com/callback'
 }
