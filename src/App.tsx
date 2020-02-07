@@ -63,8 +63,8 @@ export default class App extends Component<AppProps, AppState> {
         <Menu.Item name="ideas">
           <Link to="/ideas">Ideas</Link>
         </Menu.Item>
-        <Menu.Item name="topics">
-          <Link to="/topics">Topics</Link>
+        <Menu.Item name="myzone">
+          <Link to="/myzone">My Zone</Link>
         </Menu.Item>
         <Menu.Item name="about">
           <Link to="/about">About</Link>
@@ -110,7 +110,7 @@ export default class App extends Component<AppProps, AppState> {
         />
 
         <Route
-          path="/topics"
+          path="/myzone"
           exact
           render={props => {
             if (!this.props.auth.isAuthenticated()) {

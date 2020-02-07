@@ -62,8 +62,8 @@ export default class Auth {
     this.idToken = authResult.idToken;
     this.expiresAt = expiresAt;
 
-    // navigate to the topics route
-    this.history.replace('/topics');
+    // navigate to the myzone route
+    this.history.replace('/myzone');
   }
 
   renewSession() {
