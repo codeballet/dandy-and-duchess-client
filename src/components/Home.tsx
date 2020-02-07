@@ -23,10 +23,10 @@ const Home = (props: any) => {
               style your life in a contemporary fashion.
             </p>
             <p>To get started, 
-              feel free to explore the <a href="ideas">Ideas</a> section, 
+              feel free to explore the <a href="/ideas">Ideas</a> section, 
               where you can find articles about various aspects of 
               style and living. 
-              Then, you may log on to <a href="myzone">My Zone</a>, 
+              Then, you may log on to <a href="/myzone">My Zone</a>, 
               where you can start to build your own 
               collection of ideas to transform your life.</p>
             <p>Enjoy!</p>
