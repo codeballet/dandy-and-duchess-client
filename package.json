@@ -33,6 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "aws s3 cp build/ s3://dandyandduchess.com --recursive",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
