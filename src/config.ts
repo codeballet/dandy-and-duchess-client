@@ -9,5 +9,5 @@ export const authConfig = {
   clientId: 'YtbToRTMxUpHoDdpXCavzkeaSD8O3OQi',   // Auth0 client id
   // callbackUrl: 'http://localhost:3000/callback'
   // callbackUrl: 'https://master.ddmb4h23t8ghh.amplifyapp.com/callback'
-  callbackUrl: 'https://d21l31bnf0smqg.cloudfront.net/callback'
+  callbackUrl: 'https://dandyandduchess.com/callback'
 }
